@@ -4,6 +4,7 @@ from django.utils import timezone
 
 ## Define Object (= model)
 class Post(models.Model):
+    objects = models.Manager()
     # Foreignkey = Link for other models
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     # CharField is limit
@@ -17,12 +18,12 @@ class Post(models.Model):
         blank = True, null = True
     )
 
-def publish(self):
-    self.published_date = timezone.now()
-    self.save()
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 

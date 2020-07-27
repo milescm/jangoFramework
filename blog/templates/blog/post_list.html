@@ -14,7 +14,17 @@
         </div>
 
         <div>
-            <p>
+            {% for post in posts%}
+                <div>
+                    <p>published : {{ post.published_date }}</p>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            
+            {% endfor %}
+
+
+            <!-- <p>
                 published : 2020 Mon
             </p>
             <h2>
@@ -24,10 +34,11 @@
             </h2>
             <p>
                 Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-            </p>
+            </p> -->
         </div>
 
-        <div>
+        <!-- <div>
+            {{posts}}
             <p>
                 publisehd : 2020 Mon 2
             </p>
@@ -39,7 +50,7 @@
             <p>
                 Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
             </p>
-        </div>
+        </div> -->
 
 
     </body>
