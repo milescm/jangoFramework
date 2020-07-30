@@ -1,0 +1,25 @@
+{% load static from staticfiles %}
+
+
+<html>
+    <head>
+        <title>csv data</title>
+    </head>
+    <body>
+        <div class="image container">
+        <img  src="{% static 'a.png' %}" alt="">
+        </div>
+        
+
+        {% for value in values %}
+        <div>
+            <p>id : {{ value.id }}</p>
+            <p>UTC : {{ value.utc }} </p>
+            <p>offset : {{ value.master_offset }} </p>
+        </div>
+        {% endfor %}
+        
+        <p> Bye </p>
+    </body>
+    
+</html>
